@@ -427,7 +427,7 @@ class Templater():
         context = template.new_context
 
         # Render template code for the template meta block
-        meta_block_code = template.blocks['meta'](context(vars={})).next()
+        meta_block_code = next(template.blocks['meta'](context(vars={})))
 
         return meta_block_code
 
